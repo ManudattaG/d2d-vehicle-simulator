@@ -3,7 +3,7 @@ from simulator import Simulator
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/simulator', methods=['GET'])
 def get_simulation_result():
     number_of_requests = 5
     bounding_box = (13.34014892578125, 52.52791908000258, 13.506317138671875, 52.562995039558004)
@@ -11,4 +11,4 @@ def get_simulation_result():
     return jsonify(result)
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run()
