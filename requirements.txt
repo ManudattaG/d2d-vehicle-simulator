@@ -1,4 +1,4 @@
-geopandas==0.5.0
-Shapely==1.6.4.post2
+geopandas
+shapely
 Werkzeug==0.15.5
 uwsgi
