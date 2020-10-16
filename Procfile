@@ -1,2 +1,2 @@
-web: python app.py
+web: uwsgi uwsgi.ini
 heroku ps:scale web=1
