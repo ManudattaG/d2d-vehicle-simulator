@@ -1,30 +1,82 @@
-# Mock-Simulator
+# Visualize Mobility Data #
 
-This module (`simulator.py`) provides a class `Simulator` that returns some mock simulation results. It does not actually simulate any services, etc, but it should be used as if it did.
+https://vehicle-simulator.herokuapp.com/
 
-## Setup
-1. Initialize a virtual environment and install the requirements in `requirements.txt`.
-2. Adjust `Simulator.path_to_stops` based on the final architecture of the project/where it will be run from.
+Problem Statement:
+------------------------------------------------------------------------------------
+door2door is analysing and visualising mobility data to find the optimal solution to improve public transportation in cities and rural areas, and working on finding the most efficient solutions to stakeholder's problems. One of the ways the team evaluates a potential Ridepooling service is by simulating said service. The mission is to integrate it in a solution that enables users to trigger a simulation and see its results visualized in some way accessible through a webpage.
 
-## Usage
-- Create a `Simulator` instance (`Simulator(bounding_box)`) where `bounding_box` is a `tuple` that looks like this:
-```python
-# bounding_box = (min_longitude, min_latitude, max_longitude, max_latitude)
-bounding_box = (13.34014892578125, 52.52791908000258, 13.506317138671875, 52.562995039558004)
-```
-The bounding box has to be in Berlin.
 
-- Get the simulation results:
-```python
-result = Simulator(bounding_box).simulate(number_of_requests)
-```
-where `number_of_requests` is the number of requests to our Ridepooling service to "simulate".
+Approach:
+------------------------------------------------------------------------------------
 
-## Output
-The `result` we get is a `dict` that looks like the following:
+* Analysis of Simulator module
+* Creating an API/wrapper around the Simulator module
+* Get the results by triggering the API
+* Transformation and mapping the data
+* Render the map by plotting the location coordinates for each mobility data
+* Visualize the cluster on a map on click of a button
 
-| Key                           | Type                                                               | Description                                                                                                                     |
-|-------------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `booking_distance_bins`       | dict                                                               | How many bookings happened for every "kilometer bin". E.g. how many bookings had a distance between 0 and 1km, 1 and 2kms, etc. |
-| `most_popular_dropoff_points` | String (valid [`.geojson`](https://en.wikipedia.org/wiki/GeoJSON)) | Which points within the simulated bounding box were the most popular dropoff points.                                            |
-| `most_popular_pickup_points`  | String (valid [`.geojson`](https://en.wikipedia.org/wiki/GeoJSON)) | Which points within the simulated bounding box were the most popular pickup points.                                             |
+
+Tech Stack:
+------------------------------------------------------------------------------------
+
+1. Python 3.8
+2. Flask
+3. Heroku
+
+
+Overview of "d2d-vehicle-simulator" Workflow:
+------------------------------------------------------------------------------------
+
+1. Create Flask API (GET)
+    * An API/wrapper around the simulator module
+    * Calculates the radius based on bounding box coordinates
+    * Plots the location coordinates for each simulator data within the boundaries of Berlin
+    * Renders an webpage for visualizing results on a map
+    
+2. Create webpage for visualization
+    * A simple webpage to visualize simulation results on map by click of a button
+    
+    
+Project Structure:
+--------------------------------------------------------------------------------------
+
+1. app.py -- _An API/wrapper function for the Simulator module_
+2. simulator.py -- _Provides a class Simulator that returns some mock simulation results_
+3. templates/index.html -- _An html page for the visualizing simulation results on a map_
+4. templates/visual_map.html -- _A rendered html page after plotting location coordinates on a map_
+5. berlin_stops.geojson -- _A geojson file which contains dropoff and pickup points data_
+6. Procfile -- _A file which is used to run a web app deployed on Heroku_
+7. requirements.txt -- _Dependency libraries for the project_
+8. runtime.txt -- _A file which contains runtime version on which the app is running_
+
+
+Pre requisites:
+---------------------------------------------------------------------------------------
+
+* Python 3.7 or Python 3.8
+* Heroku
+
+
+Libraries Used:
+---------------------------------------------------------------------------------------
+
+1. _Folium_ -- A python package for visualizing maps that makes it easy to visualize data that's been manipulated in Python on an interactive leaflet map. It enables both the binding of data to a map for choropleth visualizations as well as passing rich vector/raster/HTML visualizations as markers on the map.
+
+2. _Flask_ -- A lightweight WSGI web application framework to build a web application
+
+3. _GeoPandas_ -- A python library to work with geospatial data that extends the datatypes used by pandas to allow spatial operations on geometric types.
+
+4. _Shapely_ -- A Python package for manipulation and analysis of planar geometric objects
+
+
+
+Solution:
+---------------------------------------------------------------------------------------
+
+Visualize the simulation results on a map (in any browser) by clicking the below web URL.
+
+URL --> https://vehicle-simulator.herokuapp.com/
+
+PS: DEMO screenshots available in d2d-vehicle-simulator/README.md
