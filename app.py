@@ -6,7 +6,7 @@ import json
 import webbrowser
 from math import sin, cos, sqrt, atan2, radians
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 # City Boundaries
 center_location = (52.56, 13.40)
@@ -57,7 +57,7 @@ def get_simulation_result():
         nodes = points["geometry"]["coordinates"]
         folium.Marker(location=nodes[::-1], tooltip=str(properties)).add_to(marker_cluster)
     plot_map.save(map_loc)
-    return(webbrowser.open(map_loc))
+    return app.send_static_file(map_loc)
 
 @app.route('/', methods=['GET'])
 def index():
