@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d982ca2977a24293a7de92915576f57f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d982ca2977a24293a7de92915576f57f" ></div>
+        
+</body>
+<script>    
+    
+            var map_d982ca2977a24293a7de92915576f57f = L.map(
+                "map_d982ca2977a24293a7de92915576f57f",
+                {
+                    center: [52.56, 13.4],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cd1e6faee5a443a5b470227e7cd73639 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d982ca2977a24293a7de92915576f57f);
+        
+    
+            var circle_f52dd7975ecd440a90203a0d47b8ae8b = L.circle(
+                [52.56, 13.4],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11897.879818302492, "stroke": true, "weight": 3}
+            ).addTo(map_d982ca2977a24293a7de92915576f57f);
+        
+    
+            var marker_cluster_4a1be202d62545638058e96a10157aea = L.markerClusterGroup(
+                {}
+            );
+            map_d982ca2977a24293a7de92915576f57f.addLayer(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            var marker_28a52ae22ba24786b44564caee50cedf = L.marker(
+                [52.5563886, 13.485807],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_28a52ae22ba24786b44564caee50cedf.bindTooltip(
+                `<div>
+                     {'id': 'u33dfzs54hft', 'name': 'Berlin, Stadion Buschallee/Hansastr.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eb4b8b60232345eaab1d7135d27b0e98 = L.marker(
+                [52.54840555584931, 13.467283249802387],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_eb4b8b60232345eaab1d7135d27b0e98.bindTooltip(
+                `<div>
+                     {'id': 'u33dfqnsdky1', 'name': 'Berlin, Gounodstr.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_682e52a2416341bc93aa43ffb7d0c6af = L.marker(
+                [52.538837707339226, 13.363615807021924],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_682e52a2416341bc93aa43ffb7d0c6af.bindTooltip(
+                `<div>
+                     {'id': 'u33dbh7hfv4n', 'name': 'Berlin, Am Nordhafen'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a24c0815bd1045038c9cb82d2dde516b = L.marker(
+                [52.553906389081114, 13.503166658992273],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_a24c0815bd1045038c9cb82d2dde516b.bindTooltip(
+                `<div>
+                     {'id': 'u33dgr0sww4y', 'name': 'Berlin, Gembitzer Str.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11444b22aec64c858e891cb9253b0cb6 = L.marker(
+                [52.54832712562623, 13.450893299226166],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_11444b22aec64c858e891cb9253b0cb6.bindTooltip(
+                `<div>
+                     {'id': 'u33dfn4shw0v', 'name': 'Berlin, Antonplatz'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0de0e73d3d44cd397a48059e0529783 = L.marker(
+                [52.559273663322855, 13.466694041753325],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_e0de0e73d3d44cd397a48059e0529783.bindTooltip(
+                `<div>
+                     {'id': 'u33e42n5uwwz', 'name': 'Berlin, Rathaus Weißensee'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2bbf33840ddd4d349c9be8bcd165a814 = L.marker(
+                [52.56115111198559, 13.412421016945656],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_2bbf33840ddd4d349c9be8bcd165a814.bindTooltip(
+                `<div>
+                     {'id': 'u33e10qwuh9z', 'name': 'Berlin, Maximilianstr.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79ff3390e52a4a2fbfd9f3e0c558ee8e = L.marker(
+                [52.53055799826455, 13.374041962292988],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_79ff3390e52a4a2fbfd9f3e0c558ee8e.bindTooltip(
+                `<div>
+                     {'id': 'u33db6fstvb2', 'name': 'Berlin, Scharnhorststr./Habersaathstr.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ea053fe9b36447838a50e007df6b82ab = L.marker(
+                [52.545381856568476, 13.4446535030306],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_ea053fe9b36447838a50e007df6b82ab.bindTooltip(
+                `<div>
+                     {'id': 'u33dcvw551h7', 'name': 'Berlin, Greifswalder Str./Ostseestr.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_00c4201ca2784cf8828b7fdde7bc1c5b = L.marker(
+                [52.554939040316114, 13.345985486623821],
+                {}
+            ).addTo(marker_cluster_4a1be202d62545638058e96a10157aea);
+        
+    
+            marker_00c4201ca2784cf8828b7fdde7bc1c5b.bindTooltip(
+                `<div>
+                     {'id': 'u336zxq68n8n', 'name': 'Berlin, Glasgower Str.'}
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
