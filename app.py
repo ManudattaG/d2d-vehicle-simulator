@@ -3,7 +3,6 @@ from simulator import Simulator
 import folium
 from folium.plugins import MarkerCluster
 import json
-import webbrowser
 from math import sin, cos, sqrt, atan2, radians
 
 app = Flask(__name__, static_url_path='')
@@ -28,18 +27,16 @@ def calculateRadius():
     c = 2 * atan2(sqrt(a), sqrt(1 - a))
 
     distance = R * c * 1000
-
-    print(distance)
     return(distance)
 
-@app.route('/getSimulatorData')
+@app.route('/render-simulation-data')
 def get_simulation_result():
     number_of_requests = 5
     bounding_box = (13.34014892578125, 52.52791908000258, 13.506317138671875, 52.562995039558004)
     data = Simulator(bounding_box).simulate(number_of_requests)
     radius = calculateRadius()
 
-    map_loc = "visual_map.html"
+    map_loc = "templates/visual_map.html"
     plot_map = folium.Map(location=center_location, zoom_start=11)
     folium.Circle(center_location, radius=radius).add_to(plot_map)
     marker_cluster = MarkerCluster().add_to(plot_map)
@@ -57,7 +54,7 @@ def get_simulation_result():
         nodes = points["geometry"]["coordinates"]
         folium.Marker(location=nodes[::-1], tooltip=str(properties)).add_to(marker_cluster)
     plot_map.save(map_loc)
-    return app.send_static_file(map_loc)
+    return render_template('visual_map.html')
 
 @app.route('/', methods=['GET'])
 def index():
