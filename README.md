@@ -79,4 +79,4 @@ Visualize the simulation results on a map (in any browser) by clicking the below
 
 URL --> https://vehicle-simulator.herokuapp.com/
 
-PS: DEMO screenshots available in d2d-vehicle-simulator/demo_screenshots/README.md
+PS: DEMO screenshots available in /demo_screenshots/README.md
