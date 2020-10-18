@@ -57,9 +57,9 @@ def get_simulation_result():
         nodes = points["geometry"]["coordinates"]
         folium.Marker(location=nodes[::-1], tooltip=str(properties)).add_to(marker_cluster)
     plot_map.save(map_loc)
-    webbrowser.open(map_loc)
+    return(webbrowser.open(map_loc))
 
-@app.route('/simulator', methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
     return render_template('index.html')
 
