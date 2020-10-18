@@ -2,7 +2,6 @@ from flask import Flask, jsonify, render_template
 from simulator import Simulator
 import folium
 from folium.plugins import MarkerCluster
-from geopy import distance
 import json
 import webbrowser
 from math import sin, cos, sqrt, atan2, radians
