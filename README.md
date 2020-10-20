@@ -82,4 +82,4 @@ Visualize the simulation results on a map (in any browser) by clicking the below
 
 URL --> https://vehicle-simulator.herokuapp.com/
 
-PS: DEMO screenshots available in [my directory](/demo_screenshots/README.md)
+PS: DEMO screenshots of the app are available [here](/demo_screenshots/README.md)
