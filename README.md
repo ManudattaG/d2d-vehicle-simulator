@@ -33,10 +33,12 @@ Overview of "d2d-vehicle-simulator" Workflow:
     * An API/wrapper around the simulator module
     * Calculates the radius based on bounding box coordinates
     * Plots the location coordinates for each simulator data within the boundaries of Berlin
-    * Renders an webpage for visualizing results on a map
+    * Generates a map for the visualization and stores in an html page
     
 2. Create webpage for visualization
-    * A simple webpage to visualize simulation results on map by click of a button
+    * A simple webpage to visualize simulation results on a map by click of a button
+    
+3. Web app is hosted on Heroku (URL given below in the solution section)
     
     
 Project Structure:
@@ -56,6 +58,7 @@ Pre requisites:
 ---------------------------------------------------------------------------------------
 
 * Python 3.7 or Python 3.8
+* Flask
 * Heroku
 
 
@@ -79,4 +82,4 @@ Visualize the simulation results on a map (in any browser) by clicking the below
 
 URL --> https://vehicle-simulator.herokuapp.com/
 
-PS: DEMO screenshots available in /demo_screenshots/README.md
+PS: DEMO screenshots of the app are available [here](/demo_screenshots/README.md)
